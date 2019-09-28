@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">QuizTime</string>
+    <string name="into_quiz_answer">Result</string>
+    <string name="Next">Next</string>
+    <string name="Previous">Prev</string>
+    <string name="question">Question</string>
+    <string name="Start">Начать</string>
+    <string name="Exit">Выход</string>
+    <string name="Result">Результат</string>
+    <string name="ResultNumber">0/10</string>
+    <string name="Restart">Заново</string>
+    <string name="Variant">Вариант ответа</string>
+
+
+</resources>
