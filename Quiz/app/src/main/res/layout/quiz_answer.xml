@@ -7,7 +7,7 @@
     android:background="@drawable/quizbackground">
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/textAnswerResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
@@ -20,7 +20,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/textResultNumberAnswer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
@@ -30,7 +30,7 @@
         android:textSize="88sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintTop_toBottomOf="@+id/textAnswerResult" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -39,11 +39,11 @@
         android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/textResultNumberAnswer"
         app:srcCompat="@drawable/pedestal" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonReStart"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
@@ -61,7 +61,7 @@
         app:layout_constraintTop_toBottomOf="@id/imageView2" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/buttonFinalExit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
@@ -76,5 +76,5 @@
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/button" />
+        app:layout_constraintTop_toBottomOf="@id/buttonReStart" />
 </androidx.constraintlayout.widget.ConstraintLayout>

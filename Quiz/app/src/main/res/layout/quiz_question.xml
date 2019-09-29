@@ -7,11 +7,12 @@
     android:background="@drawable/quizbackground">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textQuestion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
         android:fontFamily="sans-serif-medium"
+        android:gravity="center"
         android:text="@string/question"
         android:textColor="@color/quiztext"
         android:textSize="24sp"
@@ -27,10 +28,10 @@
         android:layout_marginEnd="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView">
+        app:layout_constraintTop_toBottomOf="@+id/questionPicture">
 
         <RadioButton
-            android:id="@+id/radioButton1"
+            android:id="@+id/variant1button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/btn_rounded_corner"
@@ -45,7 +46,7 @@
             android:textSize="24sp" />
 
         <RadioButton
-            android:id="@+id/radioButton2"
+            android:id="@+id/variant2button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/btn_rounded_corner"
@@ -60,7 +61,7 @@
             android:textSize="24sp" />
 
         <RadioButton
-            android:id="@+id/radioButton3"
+            android:id="@+id/variant3button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/btn_rounded_corner"
@@ -76,14 +77,16 @@
     </RadioGroup>
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/questionPicture"
+        android:layout_width="0dp"
+        android:layout_height="250dp"
+        android:layout_marginStart="15dp"
         android:layout_marginTop="25dp"
+        android:layout_marginEnd="15dp"
         android:background="@drawable/white_border"
         android:contentDescription="@string/Variant"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textQuestion"
         tools:srcCompat="@tools:sample/avatars[2]" />
 </androidx.constraintlayout.widget.ConstraintLayout>
