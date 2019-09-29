@@ -13,10 +13,32 @@ import kotlin.system.exitProcess
 class QuestionActivity : AppCompatActivity() {
 
     private var question = QuestionModel()
-
     var variant = 0
     var results = 0
 
+    //View
+
+    fun viewRound() {
+        question.viewVariants()
+        textQuestion.text = question.questionText
+        variant1button.text = question.variantOne
+        variant2button.text = question.variantTwo
+        variant3button.text = question.variantThree
+        when (question.round) {
+            0 -> questionPicture.setImageResource(R.drawable.dalek)
+            1 -> questionPicture.setImageResource(R.drawable.elevendoctor)
+            2 -> questionPicture.setImageResource(R.drawable.riversong)
+            3 -> questionPicture.setImageResource(R.drawable.cryingangel)
+            4 -> questionPicture.setImageResource(R.drawable.moffat)
+            5 -> questionPicture.setImageResource(R.drawable.doctorwho)
+            6 -> questionPicture.setImageResource(R.drawable.compainion)
+            7 -> questionPicture.setImageResource(R.drawable.daugter)
+            8 -> questionPicture.setImageResource(R.drawable.death)
+            9 -> questionPicture.setImageResource(R.drawable.twelvedoctorwho)
+        }
+    }
+
+    //Controller
 
     fun chooseVariant(view: View) {
         when((view as RadioButton).id) {
@@ -42,29 +64,11 @@ class QuestionActivity : AppCompatActivity() {
         }, 100)
     }
 
-    fun viewRound() {
-        question.viewVariants()
-        textQuestion.text = question.questionText
-        variant1button.text = question.variantOne
-        variant2button.text = question.variantTwo
-        variant3button.text = question.variantThree
-        when (question.round) {
-            0 -> questionPicture.setImageResource(R.drawable.dalek)
-            1 -> questionPicture.setImageResource(R.drawable.elevendoctor)
-            2 -> questionPicture.setImageResource(R.drawable.riversong)
-            3 -> questionPicture.setImageResource(R.drawable.cryingangel)
-            4 -> questionPicture.setImageResource(R.drawable.moffat)
-            5 -> questionPicture.setImageResource(R.drawable.doctorwho)
-            6 -> questionPicture.setImageResource(R.drawable.compainion)
-            7 -> questionPicture.setImageResource(R.drawable.daugter)
-            8 -> questionPicture.setImageResource(R.drawable.death)
-            9 -> questionPicture.setImageResource(R.drawable.twelvedoctorwho)
-        }
-    }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.quiz_question)
+
+        //Controller
 
         val rist: String = getString(R.string.Varr)
         val questionArray: Array<String> = resources.getStringArray(R.array.Questions_array)
