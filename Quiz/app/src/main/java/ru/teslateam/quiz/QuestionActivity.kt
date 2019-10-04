@@ -13,12 +13,12 @@ import kotlin.system.exitProcess
 class QuestionActivity : AppCompatActivity() {
 
     private var question = QuestionModel()
-    var variant = 0
-    var results = 0
+    private var variant = 0
+    private var results = 0
 
     //View
 
-    fun viewRound() {
+    private fun viewRound() {
         question.viewVariants()
         textQuestion.text = question.questionText
         variant1button.text = question.variantOne
@@ -70,7 +70,6 @@ class QuestionActivity : AppCompatActivity() {
 
         //Controller
 
-        val rist: String = getString(R.string.Varr)
         val questionArray: Array<String> = resources.getStringArray(R.array.Questions_array)
         val variantArray: Array<String> = resources.getStringArray(R.array.Variants_array)
 
