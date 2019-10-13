@@ -14,6 +14,10 @@ class QuestionModel {
     var variantsStringArray = arrayOf<String>("0")
     var imageIntArray = arrayOf<Int>(0)
 
+    init {
+
+    }
+
     fun inputArrays(a: Array<String>, b: Array<String>, c: Array<Int>) {
         questionStringArray = a
         variantsStringArray = b

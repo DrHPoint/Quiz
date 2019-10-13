@@ -1,0 +1,74 @@
+{
+  "data" : [
+    {
+      "question": "Любимая фраза далеков?",
+      "firstVariant": "Стереть!",
+      "secondVariant": "Уничтожить!",
+      "thirdVariant": "Съесть!",
+      "answer": "Уничтожить!"
+    },
+    {
+      "question": "Страсть 11 Доктора?",
+      "firstVariant": "Прическа",
+      "secondVariant": "Подтяжки",
+      "thirdVariant": "Бабочки",
+      "answer": "Бабочки"
+    },
+    {
+      "question": "При каком Докторе умерла Ривер Сонг?",
+      "firstVariant": "9",
+      "secondVariant": "10",
+      "thirdVariant": "11",
+      "answer": "9"
+    },
+    {
+      "question": "Кто пострадает от Плачущих ангелов?",
+      "firstVariant": "Доктор",
+      "secondVariant": "Эми",
+      "thirdVariant": "Вы",
+      "answer": "Вы"
+    },
+    {
+      "question": "Какой Доктор последний при шоу-раннере Моффате?",
+      "firstVariant": "11",
+      "secondVariant": "12",
+      "thirdVariant": "13",
+      "answer": "12"
+    },
+    {
+      "question": "Каких Докторов два?",
+      "firstVariant": "9",
+      "secondVariant": "10",
+      "thirdVariant": "11",
+      "answer": "9"
+    },
+    {
+      "question": "Кто из спутников был знаком со всеми Докторами?",
+      "firstVariant": "Эми Понд",
+      "secondVariant": "Роза Тайлер",
+      "thirdVariant": "Клара Освальд",
+      "answer": "Клара Освальд"
+    },
+    {
+      "question": "Как зовут известную дочь Доктора?",
+      "firstVariant": "Дженни",
+      "secondVariant": "Сьюзан",
+      "thirdVariant": "Донна",
+      "answer": "Дженни"
+    },
+    {
+      "question": "Какой Доктор умер более, чем один раз?",
+      "firstVariant": "10",
+      "secondVariant": "11",
+      "thirdVariant": "12",
+      "answer": "12"
+    },
+    {
+      "question": "Инструмент 12 Доктора?",
+      "firstVariant": "Звуковая отвертка",
+      "secondVariant": "Звуковые очки",
+      "thirdVariant": "Звуковой нож",
+      "answer": "Звуковые очки"
+    }
+  ]
+}

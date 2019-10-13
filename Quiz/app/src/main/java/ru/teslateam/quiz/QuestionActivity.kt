@@ -67,6 +67,9 @@ class QuestionActivity : AppCompatActivity() {
             imageArray[i] = resources.getIdentifier("image$i","drawable", getPackageName())
         }
 
+        /*var gson = Gson()
+        var mMineUserEntity = gson?.fromJson(response, MineUserEntity.MineUserInfo::class.java)*/
+
         question.inputArrays(questionArray, variantArray, imageArray)
         viewRound()
 
