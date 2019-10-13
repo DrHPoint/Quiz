@@ -9,19 +9,24 @@ import kotlin.system.exitProcess
 
 class AnswerActivity : AppCompatActivity() {
 
+    companion object {
+        const val TOTAL_COUNT = "total_count"
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.quiz_answer)
 
+        //Model
+
+        val resultNum: Int = intent.getIntExtra(TOTAL_COUNT,7)
+        val resultArray: Array<String> = resources.getStringArray(R.array.Result_array)
+        var dialogResult: String = resultArray[resultNum / 4]
+
         //View
 
-        val resultNum: Int = intent.getIntExtra("result",7)
         textResultNumberAnswer.text = "$resultNum/10"
-        when (resultNum) {
-            in 1..4 -> textAnswerResult.text="Вы точно шпион далеков"
-            in 5..8 -> textAnswerResult.text="Неплохо для компаньона"
-            in 9..10 -> textAnswerResult.text="Вы воплощение Доктора?"
-        }
+        textAnswerResult.text = dialogResult
 
         //Controller
 

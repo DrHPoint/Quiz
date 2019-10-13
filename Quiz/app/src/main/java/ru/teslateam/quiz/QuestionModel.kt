@@ -6,16 +6,19 @@ class QuestionModel {
     var variantTwo = ""
     var variantThree = ""
     var round = 0
-    var imagepath = ""
+    var imagePath = 0
     var arrayQuestion = arrayOf(0,0,0,0,0,0,0,0,0,0)
     var arrayAnswer = arrayOf(2,3,1,3,2,1,3,1,3,2)
     var results = 0
     var questionStringArray = arrayOf<String>("0")
     var variantsStringArray = arrayOf<String>("0")
+    var imageIntArray = arrayOf<Int>(0)
 
-    fun inputArrays(a: Array<String>, b: Array<String>) {
+    fun inputArrays(a: Array<String>, b: Array<String>, c: Array<Int>) {
         questionStringArray = a
         variantsStringArray = b
+        imageIntArray = c
+
     }
 
     fun compareResults(x: Int) {
@@ -32,6 +35,7 @@ class QuestionModel {
         variantOne = variantsStringArray[round*3]
         variantTwo = variantsStringArray[round*3+1]
         variantThree = variantsStringArray[round*3+2]
+        imagePath = imageIntArray[round]
     }
 
     fun ordinaryRound(x: Int) {

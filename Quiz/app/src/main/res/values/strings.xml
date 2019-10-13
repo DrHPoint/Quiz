@@ -55,6 +55,11 @@
         <item>Звуковые очки</item>
         <item>Звуковой нож</item>
     </string-array>
+    <string-array name="Result_array">
+        <item>Вы точно шпион далеков</item>
+        <item>Неплохо для компаньона</item>
+        <item>Вы воплощение Доктора?</item>
+    </string-array>
 
 
 </resources>

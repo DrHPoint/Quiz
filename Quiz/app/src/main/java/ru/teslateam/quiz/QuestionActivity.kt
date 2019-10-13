@@ -15,6 +15,8 @@ class QuestionActivity : AppCompatActivity() {
     private var question = QuestionModel()
     private var variant = 0
     private var results = 0
+    var imageArray = arrayOf(0,0,0,0,0,0,0,0,0,0)
+
 
     //View
 
@@ -24,18 +26,7 @@ class QuestionActivity : AppCompatActivity() {
         variant1button.text = question.variantOne
         variant2button.text = question.variantTwo
         variant3button.text = question.variantThree
-        when (question.round) {
-            0 -> questionPicture.setImageResource(R.drawable.dalek)
-            1 -> questionPicture.setImageResource(R.drawable.elevendoctor)
-            2 -> questionPicture.setImageResource(R.drawable.riversong)
-            3 -> questionPicture.setImageResource(R.drawable.cryingangel)
-            4 -> questionPicture.setImageResource(R.drawable.moffat)
-            5 -> questionPicture.setImageResource(R.drawable.doctorwho)
-            6 -> questionPicture.setImageResource(R.drawable.compainion)
-            7 -> questionPicture.setImageResource(R.drawable.daugter)
-            8 -> questionPicture.setImageResource(R.drawable.death)
-            9 -> questionPicture.setImageResource(R.drawable.twelvedoctorwho)
-        }
+        questionPicture.setImageResource(question.imagePath)
     }
 
     //Controller
@@ -56,7 +47,7 @@ class QuestionActivity : AppCompatActivity() {
                 results = question.results
                 if (question.round == 10) {
                     val randomIntent = Intent(this, AnswerActivity::class.java)
-                    randomIntent.putExtra("result", results)
+                    randomIntent.putExtra(AnswerActivity.TOTAL_COUNT, results)
                     startActivity(randomIntent)
                     exitProcess(-1)
                 }
@@ -68,12 +59,15 @@ class QuestionActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.quiz_question)
 
-        //Controller
+        //Model
 
         val questionArray: Array<String> = resources.getStringArray(R.array.Questions_array)
         val variantArray: Array<String> = resources.getStringArray(R.array.Variants_array)
+        for (i in 0..9) {
+            imageArray[i] = resources.getIdentifier("image$i","drawable", getPackageName())
+        }
 
-        question.inputArrays(questionArray, variantArray)
+        question.inputArrays(questionArray, variantArray, imageArray)
         viewRound()
 
     }
