@@ -34,11 +34,12 @@ class AnswerActivity : AppCompatActivity() {
 
         buttonReStart.setOnClickListener{
             startActivity(newIntent)
+            finish()
         }
 
         buttonFinalExit.setOnClickListener {
-            moveTaskToBack(true)
-            exitProcess(-1)
+            //moveTaskToBack(true)
+            finish()
         }
 
     }

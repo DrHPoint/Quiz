@@ -1,16 +1,13 @@
 package ru.teslateam.quiz
 
-class RoundModel {
+class RoundModel (
+    var data: List<Data>
+)
 
-    data class MineUserInfo(
-        val data: Array<Data>
-    )
-
-    data class Data(
-        val question: String,
-        val firstVariant: String,
-        val secondVariant: String,
-        val thirdVariant: String,
-        val answer: String
-    )
-}
+class Data(
+    var question: String,
+    var firstVariant: String,
+    var secondVariant: String,
+    var thirdVariant: String,
+    var answer: Int
+)

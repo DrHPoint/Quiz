@@ -11,50 +11,6 @@
     <string name="Restart">Заново</string>
     <string name="Variant">Вариант ответа</string>
     <string name="Varr">Вариант, как жизнь</string>
-    <string-array name="Questions_array">
-        <item>Любимая фраза далеков?</item>
-        <item>Страсть 11 Доктора?</item>
-        <item>При каком Докторе умерла Ривер Сонг?</item>
-        <item>Кто пострадает от Плачущих ангелов?</item>
-        <item>Какой Доктор последний при шоу-раннере Моффате?</item>
-        <item>Каких Докторов два?</item>
-        <item>Кто из спутников был знаком со всеми Докторами?</item>
-        <item>Как зовут известную дочь Доктора?</item>
-        <item>Какой Доктор умер более, чем один раз?</item>
-        <item>Инструмент 12 Доктора?</item>
-    </string-array>
-    <string-array name="Variants_array">
-        <item>Стереть!</item>//1
-        <item>Уничтожить!</item>
-        <item>Съесть!</item>
-        <item>Прическа</item>//2
-        <item>Подтяжки</item>
-        <item>Бабочки</item>
-        <item>9</item>//3
-        <item>10</item>
-        <item>11</item>
-        <item>Доктор</item>//4
-        <item>Эми</item>
-        <item>Вы</item>
-        <item>11</item>//5
-        <item>12</item>
-        <item>13</item>
-        <item>9</item>//6
-        <item>10</item>
-        <item>11</item>
-        <item>Эми Понд</item>//7
-        <item>Роза Тайлер</item>
-        <item>Клара Освальд</item>
-        <item>Дженни</item>//8
-        <item>Сьюзан</item>
-        <item>Донна</item>
-        <item>10</item>//9
-        <item>11</item>
-        <item>12</item>
-        <item>Звуковая отвертка</item>//10
-        <item>Звуковые очки</item>
-        <item>Звуковой нож</item>
-    </string-array>
     <string-array name="Result_array">
         <item>Вы точно шпион далеков</item>
         <item>Неплохо для компаньона</item>

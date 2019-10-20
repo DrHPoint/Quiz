@@ -4,7 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlin.system.exitProcess
 
 class MainActivity : AppCompatActivity() {
 
@@ -14,14 +13,14 @@ class MainActivity : AppCompatActivity() {
 
         //Controller
 
-        val newIntent = Intent(this, QuestionActivity::class.java)
-
         buttonStart.setOnClickListener{
+            val newIntent = Intent(this, QuestionActivity::class.java)
             startActivity(newIntent)
+            finish()
         }
 
         buttonExit.setOnClickListener{
-            exitProcess(-1)
+           finish()
         }
 
 

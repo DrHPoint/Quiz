@@ -18,11 +18,11 @@ class QuestionModel {
 
     }
 
-    fun inputArrays(a: Array<String>, b: Array<String>, c: Array<Int>) {
+    fun inputArrays(a: Array<String>, b: Array<String>, c: Array<Int>, d: Array<Int>) {
         questionStringArray = a
         variantsStringArray = b
         imageIntArray = c
-
+        arrayAnswer = d
     }
 
     fun compareResults(x: Int) {

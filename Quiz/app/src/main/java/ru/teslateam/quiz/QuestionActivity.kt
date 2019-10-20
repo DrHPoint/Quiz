@@ -7,8 +7,14 @@ import android.os.Bundle
 import android.os.Handler
 import android.widget.RadioButton
 import android.widget.Toast
+import com.google.gson.Gson
 import kotlinx.android.synthetic.main.quiz_question.*
 import kotlin.system.exitProcess
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+import java.io.BufferedReader
 
 class QuestionActivity : AppCompatActivity() {
 
@@ -16,7 +22,9 @@ class QuestionActivity : AppCompatActivity() {
     private var variant = 0
     private var results = 0
     var imageArray = arrayOf(0,0,0,0,0,0,0,0,0,0)
-
+    var questionArray = arrayOf("","","","","","","","","","")
+    var variantArray = arrayOf("","","","","","","","","","","","","","","","","","","","","","","","","","","","","","")
+    var answerArray = arrayOf(0,0,0,0,0,0,0,0,0,0)
 
     //View
 
@@ -49,7 +57,7 @@ class QuestionActivity : AppCompatActivity() {
                     val randomIntent = Intent(this, AnswerActivity::class.java)
                     randomIntent.putExtra(AnswerActivity.TOTAL_COUNT, results)
                     startActivity(randomIntent)
-                    exitProcess(-1)
+                    finish()
                 }
             }, 200)
         }, 100)
@@ -61,16 +69,21 @@ class QuestionActivity : AppCompatActivity() {
 
         //Model
 
-        val questionArray: Array<String> = resources.getStringArray(R.array.Questions_array)
-        val variantArray: Array<String> = resources.getStringArray(R.array.Variants_array)
+        var gson = Gson()
+        val bufferedReader: BufferedReader = resources.openRawResource(R.raw.doctorwho).bufferedReader()
+        val inputString = bufferedReader.use { it.readText() }
+        val quiz = gson.fromJson(inputString, RoundModel::class.java)
+        /*val questionArray: Array<String> = resources.getStringArray(R.array.Questions_array)
+        val variantArray: Array<String> = resources.getStringArray(R.array.Variants_array)*/
         for (i in 0..9) {
             imageArray[i] = resources.getIdentifier("image$i","drawable", getPackageName())
+            questionArray[i] = quiz.data[i].question
+            variantArray[i*3] = quiz.data[i].firstVariant
+            variantArray[i*3+1] = quiz.data[i].secondVariant
+            variantArray[i*3+2] = quiz.data[i].thirdVariant
+            answerArray[i] = quiz.data[i].answer
         }
-
-        /*var gson = Gson()
-        var mMineUserEntity = gson?.fromJson(response, MineUserEntity.MineUserInfo::class.java)*/
-
-        question.inputArrays(questionArray, variantArray, imageArray)
+        question.inputArrays(questionArray, variantArray, imageArray, answerArray)
         viewRound()
 
     }
