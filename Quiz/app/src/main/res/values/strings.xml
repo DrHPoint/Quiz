@@ -11,6 +11,8 @@
     <string name="Restart">Заново</string>
     <string name="Variant">Вариант ответа</string>
     <string name="Varr">Вариант, как жизнь</string>
+    <string name="ResultPlusNum">/10</string>
+    <string name="Error">Зачем нажимать на кнопки без смысла?</string>
     <string-array name="Result_array">
         <item>Вы точно шпион далеков</item>
         <item>Неплохо для компаньона</item>

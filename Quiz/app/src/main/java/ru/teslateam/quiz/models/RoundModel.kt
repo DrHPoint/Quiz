@@ -1,4 +1,4 @@
-package ru.teslateam.quiz
+package ru.teslateam.quiz.models
 
 class RoundModel (
     var data: List<Data>

@@ -1,11 +1,10 @@
-package ru.teslateam.quiz
+package ru.teslateam.quiz.activities
 
-import android.app.Application
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.quiz_answer.*
-import kotlin.system.exitProcess
+import ru.teslateam.quiz.R
 
 class AnswerActivity : AppCompatActivity() {
 
@@ -17,28 +16,20 @@ class AnswerActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.quiz_answer)
 
-        //Model
-
         val resultNum: Int = intent.getIntExtra(TOTAL_COUNT,7)
         val resultArray: Array<String> = resources.getStringArray(R.array.Result_array)
         var dialogResult: String = resultArray[resultNum / 4]
 
-        //View
-
-        textResultNumberAnswer.text = "$resultNum/10"
+        textResultNumberAnswer.text = resultNum.toString() + resources.getString(R.string.ResultPlusNum)
         textAnswerResult.text = dialogResult
 
-        //Controller
-
-        val newIntent = Intent(this, QuestionActivity::class.java)
-
         buttonReStart.setOnClickListener{
+            val newIntent = Intent(this, QuestionActivity::class.java)
             startActivity(newIntent)
             finish()
         }
 
         buttonFinalExit.setOnClickListener {
-            //moveTaskToBack(true)
             finish()
         }
 
