@@ -10,6 +10,8 @@ import kotlinx.android.synthetic.main.quiz_question.*
 
 import ru.teslateam.quiz.models.QuestionModel
 import ru.teslateam.quiz.R
+import ru.teslateam.quiz.models.ContextActivity
+import ru.teslateam.quiz.models.MyApplication
 
 class QuestionActivity : AppCompatActivity() {
 
@@ -48,8 +50,8 @@ class QuestionActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.quiz_question)
-
-        question = QuestionModel()
+        val thisContext = ContextActivity("Question", MyApplication.applicationContext())
+        question = QuestionModel(thisContext)
         viewRound()
     }
 }

@@ -5,7 +5,7 @@ import com.google.gson.Gson
 
 import ru.teslateam.quiz.R
 
-class QuestionModel {
+class QuestionModel(contextActivity: ContextActivity) {
     private var arrayQuestion = Array(10){0}
     private var arrayAnswer = Array(10){0}
     private var questionStringArray = Array(10){""}
@@ -22,7 +22,7 @@ class QuestionModel {
 
     init {
         val gson = Gson()
-        val inputString = MyApplication.applicationContext().resources.openRawResource(R.raw.doctorwho)
+        val inputString = contextActivity.context!!.resources.openRawResource(R.raw.doctorwho)
             .bufferedReader().use { it.readText() }
         val quiz = gson.fromJson(inputString, RoundModel::class.java)
         for (i in 0..9) {
@@ -30,8 +30,8 @@ class QuestionModel {
             variantsStringArray[i*3] = quiz.data[i].firstVariant
             variantsStringArray[i*3+1] = quiz.data[i].secondVariant
             variantsStringArray[i*3+2] = quiz.data[i].thirdVariant
-            imageIntArray[i] = MyApplication.applicationContext().resources
-                .getIdentifier("image$i","drawable", MyApplication.applicationContext().packageName)
+            imageIntArray[i] = contextActivity.context.resources
+                .getIdentifier("image$i","drawable", contextActivity.context.packageName)
             arrayAnswer[i] = quiz.data[i].answer
         }
         viewVariants()
